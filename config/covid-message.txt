@@ -1,0 +1,19 @@
+Date     17/02/2021
+
+Selangor     1382
+Sabah     94
+Kuala Lumpur     226
+Johor     436
+N.Sembilan     233
+P.Pinang     92
+Perak     99
+Sarawak     200
+Kedah     36
+Melaka     20
+Kelantan     72
+Pahang     14
+Terengganu     91
+Labuan     1
+Putrajaya     2
+Perlis     0
+Total     2998
