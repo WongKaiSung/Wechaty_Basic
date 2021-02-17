@@ -85,6 +85,7 @@ async function onMessage(msg) {
 }
 
 async function main() {
+  //scheduleJob
   var temp = NODE_SCHEDULE.scheduleJob(CONFIG.SEND4D, async function () {
     //find group
     const group = await bot.Room.find({ topic: /^groupName/i })
@@ -94,17 +95,17 @@ async function main() {
     await abc.say(_4Dresult[0]);
   });
 
-  var covidStatus = NODE_SCHEDULE.scheduleJob('00 * 17-19 * * *', async function () {
-    let covidDetailResult = await UNTILS.getCovidLivePhoto();
-    let updateResult = await UNTILS.UpdateCovidMessage(covidDetailResult);
-    const abc = await bot.Contact.find({ name: 'abc' });
-    var currentTime = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
-    if (updateResult) {
-      await abc.say(covidDetailResult);
-    } else {
-      console.log(currentTime + ': waiting next cycle...');
-    }
-  });
+  // var covidStatus = NODE_SCHEDULE.scheduleJob('00 * 17-19 * * *', async function () {
+  //   let covidDetailResult = await UNTILS.getCovidLivePhoto();
+  //   let updateResult = await UNTILS.UpdateCovidMessage(covidDetailResult);
+  //   const abc = await bot.Contact.find({ name: 'abc' });
+  //   var currentTime = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
+  //   if (updateResult) {
+  //     await abc.say(covidDetailResult);
+  //   } else {
+  //     console.log(currentTime + ': waiting next cycle...');
+  //   }
+  // });
 }
 
 const welcome = `
