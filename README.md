@@ -33,6 +33,7 @@ npm install node-schedule
 npm install dateformat
 npm install superagent
 npm install cheerio
+npm i
 
 ```
 
